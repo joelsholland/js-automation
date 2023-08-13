@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="styles.css" rel="stylesheet">
+  <script src="fetchxml.js"></script>
+  <title>Fetch XML Filter Generator</title>
+</head>
+
+
+<body onload="generateFetchXML()">
+
+  <h1>Fetch XML Filter Generator</h1>
+
+  <div>
+    <h2>
+      Column name
+    </h2>
+    <input type="text" class="inputCol">
+  </div>
+
+  <div class="firstBlock">
+    <h2>
+      Paste a list of values to filter on
+    </h2>
+    <textarea type="text" class="inputarea" name="longinput" rows="10" cols="20"></textarea>
+  </div>
+
+
+  <div class="checkbox">
+    <input type="checkbox", class="filterCheckbox">Wrap output in &lt;filter&gt; tag
+  </div>
+
+  <div class="btn"><button class="input">Enter</button></div>
+
+
+  <div class="secondBlock">
+    <h2>Fetch XML Result</h2>
+    <textarea type="text" class="outputarea" name="longinput" rows="10" cols="70"></textarea>
+  </div>
+
+
+</body>
+
+</html>
