@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <link href="style.css" rel="stylesheet" />
+        <script src="myFunction.js"></script>
+</head>
+
+ <title>Generate a Power Automate expression</title>        
+        
+
+<body>
+
+<h2>Generate a Power Automate expression</h2>
+
+        <div class="top">
+				<div class="group1">
+                <div class="label">
+              
+                <label for="t1">Action</label>
+                </div>
+                <input class="top-input" type="text" id="t1" name="t1" title="Action" />
+				</div>
+				<div class="group2">
+                <div class="label">
+                <label for="t2">Property</label>
+                </div>
+                <input type="text" class="top-input" type="text" id="t2" name="t2" title="Property" />
+                <button id="button1" name="button1" onclick="generatePA()">Generate</button>
+				</div>
+					
+
+        </div>
+        <div class="bottom">
+                <label id="pa">Power Automate expression</label>
+                <input type="textarea" size="50" id="response" class="content"></input>
+				<p id="demo"></p>
+        </div>
+
+
+</body>
+
+</html>
