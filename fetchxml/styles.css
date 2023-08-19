@@ -1,4 +1,4 @@
-html {
+html,textarea {
   font-family: sans-serif;
 }
 
@@ -33,3 +33,6 @@ button{
     height: 200px;
 }
 
+textarea,input{
+  font-size: 14px;
+}
