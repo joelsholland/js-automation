@@ -7,7 +7,9 @@ function generateFetchXML() {
   const btn = document.querySelector('button');
   const checkbox = document.querySelector('.filterCheckbox');
   const output = document.querySelector('.outputarea');
-
+  
+  //set focus on column field
+  colField.focus()
 
   btn.onclick = () => {
     const attribute = colField.value.trim();
