@@ -17,13 +17,18 @@ function generateFetchXML() {
     arr = arr.map((x) => x.trim());
     arr = arr.filter((x) => x.length > 0);
 
-    const outputArr = []
+    const outputArr = [];
 
     for (const name of arr) {
 
-      let converted = `<condition attribute='${attribute}' operator='eq' value='${name}' />`;
+      let converted = `  <value>${name}</value>`;
       outputArr.push(converted);
-    }
+    };
+
+    //add condition filter
+    
+    outputArr.unshift(`<condition attribute="${attribute}" operator="in">`);
+    outputArr.push('</condition>')
 
     //add filter tags before and after
     if (checkbox.checked) {
