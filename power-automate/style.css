@@ -42,16 +42,13 @@ padding: 20px 20px 20px 20px;
 border: 1px solid black;
 }
 
-
 p.content {
   background-color: white;
-  padding: 10px 10px 10px 10px;
-  /*border-radius:10px;*/
+  padding: 5px 5px;
   border: 1px solid black;
-  height: 5px;
-  width: auto;
+  height: 20px;
+  width: 500px;
   font-family: consolas;
-
 }
 
 button{
