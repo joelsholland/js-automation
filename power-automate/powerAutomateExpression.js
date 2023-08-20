@@ -1,5 +1,5 @@
 function generatePA() {
-        var action = document.getElementById('t1').value.trim().replace(/\s+/,'_');
+        var action = document.getElementById('t1').value.trim().replaceAll(/\s+/g,'_');
         var element = document.getElementById('t2').value.trim();
 
         console.log('action:', action)
