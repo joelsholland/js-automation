@@ -4,7 +4,9 @@ function generatePA() {
         const response = document.getElementById('response');
         const beforeAction = "first(body('";
         const afterAction = "')?['value'])";
-
+        const beforeElement = "?['";
+        const afterElement = "']";
+        
         //clear whatever was in the output
         response.innerHTML = ''
 
@@ -16,17 +18,11 @@ function generatePA() {
         response.append(beforeAction, actionSpan, afterAction);
 
         if (element.length > 0) {
-                beforeElement = "?['";
-                afterElement = "']";
 
                 elementSpan = document.createElement("span");
                 elementSpan.setAttribute("class", "elementColor");
                 elementSpan.innerText = element;
 
                 response.append(beforeElement, elementSpan, afterElement);
-
         }
-
-
-
 }
