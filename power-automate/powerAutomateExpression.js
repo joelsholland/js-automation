@@ -13,12 +13,12 @@ function powerAutomate() {
                 const afterAction = "')?['value'])";
 
                 //clear whatever was in the output
-                response.innerHTML = ''
+                response.innerHTML = '';
 
                 //create colorful span
-                actionSpan = document.createElement("span")
-                actionSpan.setAttribute("class", "actionColor")
-                actionSpan.innerText = action
+                actionSpan = document.createElement("span");
+                actionSpan.setAttribute("class", "actionColor");
+                actionSpan.innerText = action;
 
                 //show output with only action
                 response.append(beforeAction, actionSpan, afterAction);
