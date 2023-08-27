@@ -15,6 +15,11 @@ function powerAutomate() {
                 //clear whatever was in the output
                 response.innerHTML = '';
 
+                //if action and element are empty keep output empty and exit the function
+                if (action.length === 0 && element.length === 0) {
+                        return;
+                }
+
                 //create colorful span
                 actionSpan = document.createElement("span");
                 actionSpan.setAttribute("class", "actionColor");
@@ -30,7 +35,7 @@ function powerAutomate() {
                         elementSpan = document.createElement("span");
                         elementSpan.setAttribute("class", "elementColor");
                         elementSpan.innerText = element;
-                        
+
                         //show output with action and element
                         response.append(beforeElement, elementSpan, afterElement);
                 }
