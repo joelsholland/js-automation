@@ -6,8 +6,8 @@ actionField.addEventListener("input", generatePA);
 elementField.addEventListener("input", generatePA);
 
 function generatePA() {
-        const action = document.getElementById('t1').value.trim().replaceAll(/\s+/g, '_');
-        const element = document.getElementById('t2').value.trim();
+        const action = actionField.value.trim().replaceAll(/\s+/g, '_');
+        const element = elementField.value.trim();
         const beforeAction = "first(body('";
         const afterAction = "')?['value'])";
 
@@ -20,7 +20,7 @@ function generatePA() {
         }
 
         //create colorful span
-        actionSpan = document.createElement("span");
+        const actionSpan = document.createElement("span");
         actionSpan.setAttribute("class", "actionColor");
         actionSpan.innerText = action;
 
@@ -28,10 +28,10 @@ function generatePA() {
         response.append(beforeAction, actionSpan, afterAction);
 
         if (element.length > 0) {
-                beforeElement = "?['";
-                afterElement = "']";
+                const beforeElement = "?['";
+                const afterElement = "']";
 
-                elementSpan = document.createElement("span");
+                const elementSpan = document.createElement("span");
                 elementSpan.setAttribute("class", "elementColor");
                 elementSpan.innerText = element;
 
