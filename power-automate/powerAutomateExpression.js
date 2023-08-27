@@ -1,3 +1,5 @@
+window.addEventListener("load", powerAutomate)
+
 function powerAutomate() {
         const actionField = document.getElementById('t1');
         const elementField = document.getElementById('t2');
