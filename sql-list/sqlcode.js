@@ -1,11 +1,12 @@
-const colField = document.querySelector('.inputCol')
+const colField = document.querySelector('.inputCol');
 const inputField = document.querySelector('.inputarea');
 const output = document.querySelector('.outputarea');
 
+colField.addEventListener("input", generateSQL);
 inputField.addEventListener("input", generateSQL);
 
 function generateSQL() {
-
+  const col = colField.value.trim();
   const entryString = inputField.value;
 
   let arr = entryString.split(/\r?\n/);
@@ -21,7 +22,7 @@ function generateSQL() {
 
   let outputString = outputArr.join(',');
 
-  outputString = `(${outputString})`;
+  outputString = `WHERE ${col} IN (${outputString})`;
 
   output.value = outputString;
 
