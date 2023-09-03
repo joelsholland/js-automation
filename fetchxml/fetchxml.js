@@ -1,10 +1,10 @@
 const colField = document.querySelector('.inputCol');
-const input = document.querySelector('.inputarea');
+const inputField = document.querySelector('.inputarea');
 const btn = document.querySelector('button');
 const checkbox = document.querySelector('.filterCheckbox');
 const output = document.querySelector('.outputarea');
 
-input.addEventListener("input", generateFetch);
+inputField.addEventListener("input", generateFetch);
 checkbox.addEventListener("click", generateFetch);
 
 function generateFetch() {
@@ -12,7 +12,7 @@ function generateFetch() {
   //colField.focus()
 
   const attribute = colField.value.trim();
-  const entryString = input.value;
+  const entryString = inputField.value;
 
   let arr = entryString.split(/\r?\n/);
   arr = arr.map((x) => x.trim());
