@@ -1,18 +1,10 @@
-const colField = document.querySelector('.inputCol');
 const inputField = document.querySelector('.inputarea');
-const btn = document.querySelector('button');
-const checkbox = document.querySelector('.filterCheckbox');
 const output = document.querySelector('.outputarea');
 
-colField.addEventListener("input", generateFetch);
-inputField.addEventListener("input", generateFetch);
-checkbox.addEventListener("click", generateFetch);
+inputField.addEventListener("input", generateSQL);
 
-function generateFetch() {
-  //set focus on column field
-  //colField.focus()
+function generateSQL() {
 
-  const attribute = colField.value.trim();
   const entryString = inputField.value;
 
   let arr = entryString.split(/\r?\n/);
@@ -22,23 +14,13 @@ function generateFetch() {
   const outputArr = [];
 
   for (const name of arr) {
-
-    let converted = `  <value>${name}</value>`;
+    let converted = `'${name}'`;
     outputArr.push(converted);
   };
 
-  //add condition filter
+  let outputString = outputArr.join(',');
 
-  outputArr.unshift(`<condition attribute="${attribute}" operator="in">`);
-  outputArr.push('</condition>');
-
-  //add filter tags before and after
-  if (checkbox.checked) {
-    outputArr.unshift('<filter>');
-    outputArr.push('</filter>');
-  };
-
-  const outputString = outputArr.join('\n');
+  outputString = `(${outputString})`;
 
   output.value = outputString;
 
