@@ -7,7 +7,7 @@ const output = document.querySelector('.outputarea');
 input.addEventListener("input",generateFetch);
 checkbox.addEventListener("click",generateFetch);
 
-function generateFetch(filterOption) {
+function generateFetch() {
   //set focus on column field
   //colField.focus()
 
