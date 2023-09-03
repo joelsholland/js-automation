@@ -4,6 +4,7 @@ const btn = document.querySelector('button');
 const checkbox = document.querySelector('.filterCheckbox');
 const output = document.querySelector('.outputarea');
 
+colField.addEventListener("input", generateFetch);
 inputField.addEventListener("input", generateFetch);
 checkbox.addEventListener("click", generateFetch);
 
@@ -33,7 +34,7 @@ function generateFetch() {
 
   //add filter tags before and after
   if (checkbox.checked) {
-    outputArr.unshift('<filter type="or">');
+    outputArr.unshift('<filter>');
     outputArr.push('</filter>');
   };
 
