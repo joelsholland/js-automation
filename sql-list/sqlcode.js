@@ -1,3 +1,4 @@
+const colField = document.querySelector('.inputCol')
 const inputField = document.querySelector('.inputarea');
 const output = document.querySelector('.outputarea');
 
