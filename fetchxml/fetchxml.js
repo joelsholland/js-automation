@@ -4,8 +4,8 @@ const btn = document.querySelector('button');
 const checkbox = document.querySelector('.filterCheckbox');
 const output = document.querySelector('.outputarea');
 
-input.addEventListener("input",generateFetch);
-checkbox.addEventListener("click",generateFetch);
+input.addEventListener("input", generateFetch);
+checkbox.addEventListener("click", generateFetch);
 
 function generateFetch() {
   //set focus on column field
