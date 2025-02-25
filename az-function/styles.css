@@ -1,0 +1,38 @@
+
+html,textarea {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+body {
+  margin: 0 auto;
+  margin-top: 20px;
+  background: #f5f9fa;
+  width: 450px;
+  padding: 0 20px 20px 20px;
+  border: 1px solid black;
+}
+
+.firstBlock,.checkbox{
+  margin-bottom: 20px;
+}
+
+button{
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.checkbox{font-size: 14px;}
+
+.outputarea{
+    width: 100%;
+    box-sizing: border-box;
+    height: 200px;
+}
+
+textarea,input{
+  font-size: 14px;
+}
