@@ -1,12 +1,18 @@
 
-nameVal = document.querySelector('.inputName').value;
-ageVal = document.querySelector('.inputAge').value;
+nameField = document.querySelector('.inputName');
+ageField = document.querySelector('.inputAge');
 btn = document.querySelector('button');
 btn.addEventListener("click", getAzFunc);
 
 async function call_api(){
+
+nameVal = nameField.value;
+ageVal = ageField.value;
+
 const baseUrl = "https://web-app-rooibos.azurewebsites.net/api/HttpTrigger_First"
 const fullUrl = `${baseUrl}?name=${nameVal}&age=${ageVal}}`; 
+
+console.log(fullUrl);
 
 try {
     const response = await fetch(fullUrl);
@@ -22,7 +28,6 @@ try {
 }
 
 function getAzFunc() {
-    console.log(`${nameVal} ${ageVal}`)
     a = call_api() ;
     console.log(a);
 
